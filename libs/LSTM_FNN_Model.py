@@ -130,27 +130,47 @@ class LSTM_FNN_Model:
 
 
     def create_hybrid_model(self):
-        self.lstm()
-        self.fnn()
-        
-        combined = Concatenate()([self.lstm_model.output, self.fnn_model.output])
-        x = Dense(64, activation='relu')(combined)
-        x = Dropout(0.2)(x)
-        x = Dense(32, activation='relu')(x)
-        output = Dense(1, activation='sigmoid')(x)         
-        
-        self.hybrid_model = Model(inputs=[self.lstm_model.input, self.fnn_model.input], outputs=output)
-                
-        optimizer = Adam(learning_rate=0.0001, clipnorm=1.0) 
-        self.hybrid_model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
-        # self.hybrid_model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
-        
-        # Save Hybrid model architecture image
-        image_path = os.path.join(self.plot_dir, f'hybrid_model.png')
         try:
-            tf.keras.utils.plot_model(self.hybrid_model, to_file=image_path, show_shapes=True)
-        except (OSError, ImportError, AttributeError) as e:
-            print(f"Warning: Could not generate Hybrid model plot. Graphviz may not be installed. Error: {e}")
+            self.lstm()
+            self.fnn()
+            
+            # Check if LSTM and FNN models were created successfully
+            if not hasattr(self, 'lstm_model') or self.lstm_model is None:
+                print("Error: LSTM model creation failed")
+                self.hybrid_model = None
+                return False
+                
+            if not hasattr(self, 'fnn_model') or self.fnn_model is None:
+                print("Error: FNN model creation failed")
+                self.hybrid_model = None
+                return False
+            
+            combined = Concatenate()([self.lstm_model.output, self.fnn_model.output])
+            x = Dense(64, activation='relu')(combined)
+            x = Dropout(0.2)(x)
+            x = Dense(32, activation='relu')(x)
+            output = Dense(1, activation='sigmoid')(x)         
+            
+            self.hybrid_model = Model(inputs=[self.lstm_model.input, self.fnn_model.input], outputs=output)
+                    
+            optimizer = Adam(learning_rate=0.0001, clipnorm=1.0) 
+            self.hybrid_model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
+            # self.hybrid_model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+            
+            # Save Hybrid model architecture image
+            image_path = os.path.join(self.plot_dir, f'hybrid_model.png')
+            try:
+                tf.keras.utils.plot_model(self.hybrid_model, to_file=image_path, show_shapes=True)
+            except (OSError, ImportError, AttributeError) as e:
+                print(f"Warning: Could not generate Hybrid model plot. Graphviz may not be installed. Error: {e}")
+                
+            print("Hybrid model created successfully")
+            return True
+            
+        except Exception as e:
+            print(f"Error creating hybrid model: {e}")
+            self.hybrid_model = None
+            return False
         
 
     def evaluate_model(self, home_directory):
@@ -198,13 +218,20 @@ class LSTM_FNN_Model:
         self.y_train = np.nan_to_num(self.y_train, nan=0.0)
                     
         # Create Hybrid Model
-        self.create_hybrid_model()
+        model_created = self.create_hybrid_model()
+        
+        if not model_created or self.hybrid_model is None:
+            print("Error: Failed to create hybrid model. Cannot proceed with training.")
+            return 0.0, 0.0
         
         # Evaluate Hybrid Model
         self.evaluate_model(home_directory)
         
         # Save Hybrid Model
-        self.save_model(model_path='hybrid_model.keras')    
+        save_success = self.save_model(model_path='hybrid_model.keras')
+        if not save_success:
+            print("Warning: Model training completed but saving failed.")
+            
         return self.loss, self.accuracy      
         
         
@@ -229,17 +256,33 @@ class LSTM_FNN_Model:
         
     def save_model(self, model_path='hybrid_model.keras'):
         """Save the trained hybrid model."""
-        if hasattr(self, 'hybrid_model'):
-            self.hybrid_model.save(model_path)
-            print(f'Model saved successfully at {model_path}')
+        if hasattr(self, 'hybrid_model') and self.hybrid_model is not None:
+            try:
+                self.hybrid_model.save(model_path)
+                print(f'Model saved successfully at {model_path}')
+            except Exception as e:
+                print(f'Error saving model: {e}')
+                return False
         else:
-            print('Error: Hybrid model has not been created yet.')
+            print('Error: Hybrid model has not been created yet or is None.')
+            return False
             
-        with open('scaler.pkl', "wb") as f:
-            pickle.dump(self.scaler, f)
+        try:
+            with open('scaler.pkl', "wb") as f:
+                pickle.dump(self.scaler, f)
+            print('Scaler saved successfully')
+        except Exception as e:
+            print(f'Error saving scaler: {e}')
+            return False
             
-        with open('label_encoder.pkl', "wb") as f:
-            pickle.dump(self.label_encoder, f)
+        try:
+            with open('label_encoder.pkl', "wb") as f:
+                pickle.dump(self.label_encoder, f)
+            print('Label encoder saved successfully')
+            return True
+        except Exception as e:
+            print(f'Error saving label encoder: {e}')
+            return False
             
             
     def load_hybrid_model(self, home_directory, model_path="libs/hybrid_model.keras"):

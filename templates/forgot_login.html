@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center mt-5 mb-5">
+            <div class="col-md-5">
+                <div class="card shadow-lg">
+                    <div class="card-header text-center bg-danger text-white">
+                        <h2>Reset Password</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/do_reset_password" method="POST">
+                            <p class="text-center">Please enter your username to reset your password</p>
+
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" name="username" class="form-control" placeholder="Enter username" required>
+                            </div>
+
+                            <p class="text-center">Enter your new password</p>
+
+                            <div class="mb-3">
+                                <label for="new_password" class="form-label">New Password</label>
+                                <input type="password" id="new_password" name="new_password" class="form-control" placeholder="New Password" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="re_new_password" class="form-label">Confirm New Password</label>
+                                <input type="password" id="re_new_password" name="re_new_password" class="form-control" placeholder="Re-enter New Password" required>
+                            </div>
+
+                            <!-- Error Message -->
+                            {% if message %}
+                                <div class="alert alert-danger text-center" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endif %}
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-danger">Proceed</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{{url_for('login')}}" class="text-decoration-none">Login Page</a> |
+                        <a href="{{url_for('register')}}" class="text-decoration-none">Register Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

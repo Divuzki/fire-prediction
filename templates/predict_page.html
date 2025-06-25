@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Fire Outbreak</title>
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body>
+
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hybrid Model</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('train_page') }}">Create Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('evaluate_page') }}">Evaluate Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('predict_page') }}">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center">Predict Fire Outbreak</h2>
+
+    <form action="{{ url_for('predict_page') }}" method="post" class="mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="time_seconds" class="form-label">Time (Seconds)</label>
+                <input type="number" class="form-control" id="time_seconds" name="Time_Seconds" value="12" required>
+            </div>
+            <div class="col-md-6">
+                <label for="humidity" class="form-label">Humidity</label>
+                <input type="number" class="form-control" id="humidity" name="Humidity" value="38.2" step="0.01" required>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label for="temperature" class="form-label">Temperature (°C)</label>
+                <input type="number" class="form-control" id="temperature" name="Temperature" value="22.7" step="0.01" required>
+            </div>
+            <div class="col-md-6">
+                <label for="mq139" class="form-label">MQ139 Sensor</label>
+                <input type="number" class="form-control" id="mq139" name="MQ139" value="78" step="0.01" required>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label for="tvoc" class="form-label">TVOC</label>
+                <input type="number" class="form-control" id="tvoc" name="TVOC" value="6" step="0.01" required>
+            </div>
+            <div class="col-md-6">
+                <label for="eco2" class="form-label">eCO2</label>
+                <input type="number" class="form-control" id="eco2" name="eCO2" value="308" step="0.01" required>
+            </div>
+        </div>
+ 
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label for="Detector" class="form-label">Detector Type</label> 
+                <select name="Detector" id="Detector" class="form-select" required>
+                    <option value="">--select--</option>
+                    <option value="1">ON</option>
+                    <option value="0">OFF</option>
+                </select>
+            </div>
+        </div> 
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-success">Predict</button>
+        </div>
+    </form>
+
+    {% if prediction %}
+    <h3>Prediction carried out</h3>
+
+    <div class="alert alert-info mt-4 text-center">
+        <h5>Prediction Result:</h5>
+        <p><strong>{{ prediction }}</strong></p>
+    </div>
+
+        {% if prediction != 'No Fire Risk' %}
+            <div class="row alert alert-info">  
+                <div class="col-md-12 text-center mt-4">
+                    <h3>Model fire outbreak features</h3>
+                    <img src="{{ url_for('static', filename='training_plots/cause_of_fire.png') }}" class="img-fluid" alt="Evaluation Chart">
+                </div> 
+            </div>
+        {% endif %}
+        
+    {% else %}
+        <h3>Prediction not carried out</h3>
+
+        <div class="alert alert-info mt-4 text-center">
+            <h5>Prediction Result:</h5>
+            <p><strong>No result yet</strong></p>
+        </div>
+
+        <div class="row alert alert-info">  
+            <div class="col-md-12 text-center mt-4">
+                <h3>Model fire outbreak features</h3>
+                <img src="{{ url_for('static', filename='training_plots/no_image.png') }}" class="img-fluid" alt="Evaluation Chart">
+            </div> 
+        </div>
+    {% endif %} 
+</div>
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>

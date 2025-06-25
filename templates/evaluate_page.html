@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Evaluation</title>
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hybrid Model</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('train_page') }}">Create Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('evaluate_page') }}">Evaluate Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('predict_page') }}">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container mt-5">
+    <h2 class="text-center">Model Evaluation</h2>
+
+    <div class="text-center mt-4">
+        <form action="{{ url_for('evaluate_page') }}" method="post">
+            <button type="submit" class="btn btn-primary">Evaluate Model</button>
+        </form>
+    </div>
+
+    {% if evaluation_complete %}
+        <h3>Model evaluated</h3>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Evaluation Metrics</h5>
+                <p><strong>Loss:</strong> {{ loss }}</p>
+                <p><strong>Accuracy:</strong> {{ accuracy }}</p>
+            </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col-md-12 text-center mt-4">
+                <h3>Model Evaluation</h3>
+                <img src="{{ url_for('static', filename='training_plots/evaluation_results.png') }}" class="img-fluid" alt="Evaluation Chart">
+            </div> 
+
+            <div class="col-md-12 text-center mt-4">
+                <h3>Model feature importance</h3>
+                <img src="{{ url_for('static', filename='training_plots/feature_importance_permutation.png') }}" class="img-fluid" alt="Evaluation Chart">
+            </div> 
+        </div>
+
+    {% else %}
+        <h3>Model not evaluated</h3>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Evaluation Metrics</h5>
+                <p><strong>Loss:</strong> 0.0</p>
+                <p><strong>Accuracy:</strong> 0.0</p>
+            </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col-md-12 text-center mt-4">
+                <h3>Model Evaluation</h3>
+                <img src="{{ url_for('static', filename='training_plots/no_image.png') }}" class="img-fluid" alt="Evaluation Chart">
+            </div> 
+
+            <div class="col-md-12 text-center mt-4">
+                <h3>Model feature importance</h3>
+                <img src="{{ url_for('static', filename='training_plots/no_image.png') }}" class="img-fluid" alt="Evaluation Chart">
+            </div> 
+        </div>
+    {% endif %}
+</div>
+
+<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>

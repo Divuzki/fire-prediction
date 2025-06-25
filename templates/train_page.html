@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Model</title>
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Hybrid Model</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('train_page') }}">Create Model</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('evaluate_page') }}">Evaluate Model</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('predict_page') }}">Predict</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Training Section -->
+<div class="container mt-5">
+  <h2 class="text-center">Train Hybrid Model</h2>
+
+  <div class="text-center mt-4">
+      <form action="{{ url_for('train_page') }}" method="post">
+          <button type="submit" class="btn btn-primary">Start Training</button>
+      </form>
+  </div>
+  
+  {% if training_complete or trained %}
+    <div class="alert alert-success mt-4 text-center">
+        <h5> {{message}}!</h5> 
+    </div>
+    
+    <div class="row mt-4 mb-5">
+        <div class="col-md-3 text-center mb-5">
+            <h4>LSTM Model</h4>
+            <div class="text-center mt-4">
+                <img src="{{ url_for('static', filename='training_plots/lstm_model.png') }}" class="img-fluid" alt="Training Progress">
+            </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+            <h4>FNN Model</h4>
+            <div class="text-center mt-4">
+                <img src="{{ url_for('static', filename='training_plots/fnn_model.png') }}" class="img-fluid" alt="Training Progress">
+            </div>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <h4>Hybrid Model</h4>
+            <div class="text-center mt-4">
+                <img src="{{ url_for('static', filename='training_plots/hybrid_model.png') }}" class="img-fluid" alt="Training Progress">
+            </div>
+        </div> 
+    </div>
+
+    {% else %}
+        <div class="alert alert-info mt-4 text-center">
+            <h5> Model not trained no this session</h5> 
+        </div>
+        
+        <div class="row mt-4 mb-5">
+            <div class="col-md-3 text-center mb-5">
+                <h4>LSTM Model</h4>
+                <div class="text-center mt-4">
+                    <img src="{{ url_for('static', filename='training_plots/no_image.png') }}" class="img-fluid" alt="Training Progress">
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <h4>FNN Model</h4>
+                <div class="text-center mt-4">
+                    <img src="{{ url_for('static', filename='training_plots/no_image.png') }}" class="img-fluid" alt="Training Progress">
+                </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <h4>Hybrid Model</h4>
+                <div class="text-center mt-4">
+                    <img src="{{ url_for('static', filename='training_plots/no_image.png') }}" class="img-fluid" alt="Training Progress">
+                </div>
+            </div> 
+        </div>
+  {% endif %}
+
+ 
+</div>
+
+<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>

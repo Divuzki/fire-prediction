@@ -1,0 +1,543 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "send_file",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "Sequential",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "LSTM",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dropout",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Flatten",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Concatenate",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Input",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "MinMaxScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "StandardScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "Adam",
+        "importPath": "tensorflow.keras.optimizers",
+        "description": "tensorflow.keras.optimizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "joblib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "joblib",
+        "description": "joblib",
+        "detail": "joblib",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "libs.Database",
+        "description": "libs.Database",
+        "isExtraImport": true,
+        "detail": "libs.Database",
+        "documentation": {}
+    },
+    {
+        "label": "LSTM_FNN_Model",
+        "importPath": "libs.LSTM_FNN_Model",
+        "description": "libs.LSTM_FNN_Model",
+        "isExtraImport": true,
+        "detail": "libs.LSTM_FNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "libs.Database",
+        "description": "libs.Database",
+        "peekOfCode": "class Database:\n    def __init__(self):\n        create = not os.path.exists('database.db')\n        self.db = sqlite3.connect('database.db')\n        if create:\n            self.cursor = self.db.cursor()\n            self.create(\"CREATE TABLE settings (label TEXT PRIMARY KEY, value TEXT NOT NULL)\")\n            self.create(\"CREATE TABLE history (ip TEXT PRIMARY KEY, data TEXT NOT NULL, datex DATE NOT NULL, timex TIME NOT NULL, blocked TINYINT NOT NULl DEFAULT 0, quarantined TINYINT DEFAULT 0, attack_label TEXT NOT NULL)\")\n            self.create(\"CREATE TABLE users (email TEXT PRIMARY KEY, username TEXT NOT NULL, password TEXT NOT NULL, name TEXT NOT NULL, phone TEXT NOT NULL, department TEXT NOT NULL)\")\n    def create(self, query=''):",
+        "detail": "libs.Database",
+        "documentation": {}
+    },
+    {
+        "label": "LSTM_FNN_Model",
+        "kind": 6,
+        "importPath": "libs.LSTM_FNN_Model",
+        "description": "libs.LSTM_FNN_Model",
+        "peekOfCode": "class LSTM_FNN_Model:\n    def __init__(self, time_steps=10):\n        self.file_path_1 = 'libs/data/electrical_1.csv'\n        self.file_path_2 = 'libs/data/electrical_2.csv'\n        self.file_path_3 = 'libs/data/electrical_3.csv'\n        self.file_path_4 = 'libs/data/electrical_4.csv'\n        self.time_steps = time_steps\n        self.lstm_model = None\n        self.fnn_model = None\n        self.hybrid_model = None",
+        "detail": "libs.LSTM_FNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def index():\n    session['trained'] = False\n    return render_template('login.html')\n@app.route('/train_page', methods=['POST', 'GET'])\ndef train_page(): \n    if request.method == 'POST':\n        home_directory = os.path.dirname(os.path.abspath(__file__)) \n        model.prepare_model(home_directory) \n        session['trained'] = True\n        return render_template('train_page.html', training_complete=True, trained=True, message=\"Model training completed successfully.\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "train_page",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def train_page(): \n    if request.method == 'POST':\n        home_directory = os.path.dirname(os.path.abspath(__file__)) \n        model.prepare_model(home_directory) \n        session['trained'] = True\n        return render_template('train_page.html', training_complete=True, trained=True, message=\"Model training completed successfully.\")\n    trained = session.get('trained') if session.get('trained') else False\n    return render_template('train_page.html', trained=trained, message='Model trained on this session')\n@app.route('/evaluate_page', methods=['POST', 'GET'])\ndef evaluate_page():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_page",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def evaluate_page():\n    if request.method == 'POST':\n        home_directory = os.path.dirname(os.path.abspath(__file__)) \n        model.prepare_model(home_directory)        \n        loss, accuracy = model.evaluate_model(home_directory)\n        calc = model.compute_feature_importance()\n        print(calc)\n        return render_template('evaluate_page.html', evaluation_complete=True, loss=loss, accuracy=accuracy)\n    return render_template('evaluate_page.html')\n@app.route('/predict_page', methods=['POST', 'GET'])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "predict_page",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def predict_page():\n    try:\n        if request.method == 'POST':\n            user_input = {key: float(value) for key, value in request.form.items()} \n            user_input_df = pd.DataFrame([user_input]) \n            home_directory = os.path.dirname(os.path.abspath(__file__))   \n            prediction = model.predict_user_input(home_directory, user_input_df)\n            prediction_label = \"Fire Risk Detected\" if prediction[0][0] > 0.5 else \"No Fire Risk\"\n            print('prediction_label:', prediction_label)\n            return render_template('predict_page.html', prediction=prediction_label)        ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "profile",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def profile():\n    if not session.get('details'):\n        return render_template('login.html')\n    user_details = session.get('details')\n    username=user_details[2]\n    name=user_details[5]\n    email=user_details[6]\n    department=user_details[8]\n    phone=user_details[7]\n    return render_template(\"profile.html\", name=name, user=user_details, username=username, email=email, phone=phone, department=department)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "allowed_file",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']\n'''\nDATABASE\n'''\n@app.route('/login')\ndef login():\n    return render_template(\"login.html\")\n@app.route('/register')\ndef register():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def login():\n    return render_template(\"login.html\")\n@app.route('/register')\ndef register():\n    return render_template(\"register.html\")\n@app.route('/forgot_login')\ndef forgot_login():\n    return render_template(\"forgot_login.html\")\n@app.route('/update', methods=['POST', 'GET'])\ndef update():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def register():\n    return render_template(\"register.html\")\n@app.route('/forgot_login')\ndef forgot_login():\n    return render_template(\"forgot_login.html\")\n@app.route('/update', methods=['POST', 'GET'])\ndef update():\n    if request.method == 'POST':\n        name = request.form.get('name')\n        department = request.form.get('department')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "forgot_login",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def forgot_login():\n    return render_template(\"forgot_login.html\")\n@app.route('/update', methods=['POST', 'GET'])\ndef update():\n    if request.method == 'POST':\n        name = request.form.get('name')\n        department = request.form.get('department')\n        phone = request.form.get('phone')\n        email = request.form.get('email')\n        username = request.form.get('username')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def update():\n    if request.method == 'POST':\n        name = request.form.get('name')\n        department = request.form.get('department')\n        phone = request.form.get('phone')\n        email = request.form.get('email')\n        username = request.form.get('username')\n        password = request.form.get('password')\n        _id = request.form.get('id')\n        from libs.Database import Database as db",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "doregister",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def doregister():\n    if request.method == 'POST':\n        name = request.form.get('name')\n        department = request.form.get('department')\n        phone = request.form.get('phone')\n        email = request.form.get('email')\n        username = request.form.get('username')\n        password = request.form.get('password')\n        from libs.Database import Database as db\n        details = db().register(name, department, phone, email, username, password)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "dologin",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def dologin():\n    if request.method == 'POST':\n        username = request.form.get('username')\n        password = request.form.get('password')\n        from libs.Database import Database as db\n        details = db().login(username, password)\n        if details and 'details' in details and len(details['details']) > 0:\n            session['details'] = details['details']\n            user_details = session.get('details')\n            name = user_details[5] if len(user_details) > 5 else \"User\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def reset_password():\n    if request.method == 'POST':\n        username = request.form.get('username')\n        new_password = request.form.get('new_password')\n        re_new_password = request.form.get('re_new_password')\n        if not username:\n            return render_template(\"forgot_login.html\", message='Invalid user')\n        if not new_password:\n            return render_template(\"forgot_login.html\", message='Please enter new password')\n        if not re_new_password:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def logout():\n    session['details'] = None\n    return render_template(\"login.html\")\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "path = sys.path\nparent = os.path.dirname(__file__)\nloc = parent + '\\libs'\ntry:\n    path.index(loc)\nexcept(ValueError):\n    sys.path.append(loc)\napp = Flask('__name__')\napp.secret_key  = b'k843h/jd6uJU73R6778r6ibYGU'\nmodel = LSTM_FNN_Model()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "parent",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "parent = os.path.dirname(__file__)\nloc = parent + '\\libs'\ntry:\n    path.index(loc)\nexcept(ValueError):\n    sys.path.append(loc)\napp = Flask('__name__')\napp.secret_key  = b'k843h/jd6uJU73R6778r6ibYGU'\nmodel = LSTM_FNN_Model()\nmodel_created = False",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "loc",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "loc = parent + '\\libs'\ntry:\n    path.index(loc)\nexcept(ValueError):\n    sys.path.append(loc)\napp = Flask('__name__')\napp.secret_key  = b'k843h/jd6uJU73R6778r6ibYGU'\nmodel = LSTM_FNN_Model()\nmodel_created = False\napp.config['UPLOAD_FOLDER'] = 'uploads/'",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask('__name__')\napp.secret_key  = b'k843h/jd6uJU73R6778r6ibYGU'\nmodel = LSTM_FNN_Model()\nmodel_created = False\napp.config['UPLOAD_FOLDER'] = 'uploads/'\napp.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}\n@app.route('/')\ndef index():\n    session['trained'] = False\n    return render_template('login.html')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "model = LSTM_FNN_Model()\nmodel_created = False\napp.config['UPLOAD_FOLDER'] = 'uploads/'\napp.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}\n@app.route('/')\ndef index():\n    session['trained'] = False\n    return render_template('login.html')\n@app.route('/train_page', methods=['POST', 'GET'])\ndef train_page(): ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "model_created",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "model_created = False\napp.config['UPLOAD_FOLDER'] = 'uploads/'\napp.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}\n@app.route('/')\ndef index():\n    session['trained'] = False\n    return render_template('login.html')\n@app.route('/train_page', methods=['POST', 'GET'])\ndef train_page(): \n    if request.method == 'POST':",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['UPLOAD_FOLDER']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['UPLOAD_FOLDER'] = 'uploads/'\napp.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}\n@app.route('/')\ndef index():\n    session['trained'] = False\n    return render_template('login.html')\n@app.route('/train_page', methods=['POST', 'GET'])\ndef train_page(): \n    if request.method == 'POST':\n        home_directory = os.path.dirname(os.path.abspath(__file__)) ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['ALLOWED_EXTENSIONS']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}\n@app.route('/')\ndef index():\n    session['trained'] = False\n    return render_template('login.html')\n@app.route('/train_page', methods=['POST', 'GET'])\ndef train_page(): \n    if request.method == 'POST':\n        home_directory = os.path.dirname(os.path.abspath(__file__)) \n        model.prepare_model(home_directory) ",
+        "detail": "app",
+        "documentation": {}
+    }
+]

@@ -1,0 +1,28 @@
+# Fire Prediction Application Requirements
+# Generated from PythonImportHelper-v2-Completion.json
+
+# Web Framework
+Flask==2.3.3
+
+# Data Science and Machine Learning
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.0
+
+# Deep Learning
+tensorflow==2.13.0
+
+# Data Visualization
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# Image Processing
+Pillow==10.0.0
+
+# Model Persistence
+joblib==1.3.2
+
+# Optional: Model Visualization (requires Graphviz system installation)
+# Install Graphviz system package first: brew install graphviz (macOS) or apt-get install graphviz (Ubuntu)
+pydot==1.4.2
+graphviz==0.20.1
